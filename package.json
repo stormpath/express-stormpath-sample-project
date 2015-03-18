@@ -1,0 +1,26 @@
+{
+  "name": "stormpath-express-profile-example",
+  "version": "1.0.0",
+  "description": "A sample Express-Stormpath project that showcases how to store profile data in customData.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stormpath/stormpath-express-profile-example.git"
+  },
+  "keywords": [
+    "stormpath",
+    "express",
+    "example",
+    "sample",
+    "customdata"
+  ],
+  "author": "Stormpath, Inc.",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/stormpath/stormpath-express-profile-example/issues"
+  },
+  "homepage": "https://github.com/stormpath/stormpath-express-profile-example"
+}
