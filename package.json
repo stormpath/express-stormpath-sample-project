@@ -4,7 +4,7 @@
   "description": "A sample Express-Stormpath project that showcases how to store profile data in customData.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
