@@ -12,9 +12,9 @@ html
 
     form(method='post')
       span Favorite Color
-      input(type='text', value=user.customData.favoriteColor)
+      input(type='text', name='favoriteColor', value=user.customData.favoriteColor)
       br
       span Birthday
-      input(type='text', value=user.customData.birthday)
+      input(type='text', name='birthday', value=user.customData.birthday)
       br
       input(type='submit', value='Save Profile Data')
