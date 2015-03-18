@@ -1,0 +1,20 @@
+html
+
+  head
+    title Profile Page
+
+  body
+    h1 Profile Page
+
+    p.
+      Enter your profile information below, then click save to save your
+      changes.
+
+    form(method='post')
+      span Favorite Color
+      input(type='text', value=user.customData.favoriteColor)
+      br
+      span Birthday
+      input(type='text', value=user.customData.birthday)
+      br
+      input(type='submit', value='Save Profile Data')
