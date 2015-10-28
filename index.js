@@ -7,7 +7,7 @@ var stormpath = require('express-stormpath');
 var routes = require('./lib/routes');
 
 /**
- * Globals.
+ * Create the Express application.
  */
 var app = express();
 
@@ -22,11 +22,10 @@ app.set('views', './lib/views');
  */
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(stormpath.init(app, {
-  apiKeyId: process.env.STORMPATH_API_KEY_ID,
-  apiKeySecret: process.env.STORMPATH_API_KEY_SECRET,
-  application: process.env.STORMPATH_APPLICATION_HREF,
-  redirectUrl: '/profile',
-  expandCustomData: true
+  website: true,
+  expand: {
+    customData: true
+  }
 }));
 
 /**
@@ -37,4 +36,7 @@ app.use('/', routes);
 /**
  * Start the web server.
  */
-app.listen(3000);
+app.on('stormpath.ready',function () {
+  app.listen(3000);
+});
+
