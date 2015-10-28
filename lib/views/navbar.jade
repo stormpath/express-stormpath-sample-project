@@ -1,0 +1,14 @@
+nav.navbar.navbar-default
+  div.container-fluid
+    ul.nav.navbar-nav
+      li
+        a(href="/") Home
+      if user
+        li
+          a(href="/profile") My Profile
+    ul.nav.navbar-nav.navbar-right
+      li
+        if user
+          a.btn.btn-prmary(href="/logout") Logout
+        else
+          a.btn.btn-prmary(href="/login") Login

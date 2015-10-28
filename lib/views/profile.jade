@@ -1,20 +1,24 @@
-html
+extends ./layout.jade
+block content
 
-  head
-    title Profile Page
+  h1 My Profile
 
-  body
-    h1 Profile Page
+  hr
 
-    p.
-      Enter your profile information below, then click save to save your
-      changes.
+  p.alert.alert-info.
+    Enter your profile information below, then click save to save your
+    changes.
 
-    form(method='post')
-      span Favorite Color
-      input(type='text', name='favoriteColor', value=user.customData.favoriteColor)
-      br
-      span Birthday
-      input(type='text', name='birthday', value=user.customData.birthday)
-      br
-      input(type='submit', value='Save Profile Data')
+  form.form-horizontal(method='post')
+    div.form-group
+      label.control-label.col-sm-4 Favorite Color
+      div.col-sm-4
+        input.form-control(type='text', name='favoriteColor', value=user.customData.favoriteColor)
+
+    div.form-group
+      label.control-label.col-sm-4 Birthday
+      div.col-sm-4
+        input.form-control(type='text', name='birthday', value=user.customData.birthday)
+    div.form-group
+      div.col-sm-offset-4.col-sm-4
+        button.btn.btn-default(type='submit') Save
