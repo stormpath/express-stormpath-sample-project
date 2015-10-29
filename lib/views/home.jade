@@ -3,17 +3,16 @@ block content
 
   if user
 
-    h2 Welcome, #{user.fullName}
+    h2 Welcome Back, #{user.givenName}
 
   else
 
-    h2 Welcome
+    h2 Welcome!
   hr
   div.jumbotron
 
     p.
-      Ready to begin?  Try these features, which have bee
-      automatically added to this application:
+      Ready to begin?  Try these Stormpath features provided automatically by Express-Stormpath:
     ol.lead
       if user
         li Registration (Already logged in!)
@@ -27,14 +26,3 @@ block content
         a(href="/forgot") Forgot Password
       li
         a(href="/profile") Custom Profile Data
-
-    //- else
-    //-   p Welcome to my app, ready to get started?
-
-    //-   p
-    //-     a.btn.btn-primary(href="/login") Login now
-
-    //-   p
-    //-     span.small Don't have an account?
-    //-     span &nbsp;
-    //-     a.small(href="/register") Register now
