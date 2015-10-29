@@ -1,5 +1,5 @@
 nav.navbar.navbar-default
-  div.container-fluid
+  div.container
     ul.nav.navbar-nav
       li
         a(href="/") Home
@@ -9,6 +9,6 @@ nav.navbar.navbar-default
     ul.nav.navbar-nav.navbar-right
       li
         if user
-          a.btn.btn-prmary(href="/logout") Logout
+          a(href="/logout") Logout
         else
-          a.btn.btn-prmary(href="/login") Login
+          a(href="/login") Login

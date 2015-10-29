@@ -1,24 +1,25 @@
 extends ./layout.jade
 block content
 
-  h1 My Profile
+  h2 My Profile
 
   hr
 
-  p.alert.alert-info.
-    Enter your profile information below, then click save to save your
-    changes.
+  div.panel.panel-default
+    div.panel-heading.
+      Enter your profile information below, then click save to save your
+      changes.
+    div.panel-body
+      form.form-horizontal(method='post')
+        div.form-group
+          label.control-label.col-sm-4 Favorite Color
+          div.col-sm-4
+            input.form-control(type='text', name='favoriteColor', value=user.customData.favoriteColor)
 
-  form.form-horizontal(method='post')
-    div.form-group
-      label.control-label.col-sm-4 Favorite Color
-      div.col-sm-4
-        input.form-control(type='text', name='favoriteColor', value=user.customData.favoriteColor)
-
-    div.form-group
-      label.control-label.col-sm-4 Birthday
-      div.col-sm-4
-        input.form-control(type='text', name='birthday', value=user.customData.birthday)
-    div.form-group
-      div.col-sm-offset-4.col-sm-4
-        button.btn.btn-default(type='submit') Save
+        div.form-group
+          label.control-label.col-sm-4 Birthday
+          div.col-sm-4
+            input.form-control(type='text', name='birthday', value=user.customData.birthday)
+        div.form-group
+          div.col-sm-offset-4.col-sm-4
+            button.btn.btn-default(type='submit') Save
