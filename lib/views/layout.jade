@@ -1,7 +1,11 @@
-html
+block vars
+  - var title
+  - var siteName = 'Express-Stormpath Example Project'
+doctype html
+html(lang='en')
   head
     block title
-      title Express-Stormpath Example Project
+      title=title ? (siteName + ' - ' + title) : siteName
     block css
       link(href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/paper/bootstrap.min.css', rel='stylesheet')
   body
