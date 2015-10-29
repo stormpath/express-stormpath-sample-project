@@ -1,21 +1,40 @@
 extends ./layout.jade
 block content
 
+  if user
+
+    h2 Welcome, #{user.fullName}
+
+  else
+
+    h2 Welcome
+  hr
   div.jumbotron
 
-    h2 Hello!
+    p.
+      Ready to begin?  Try these features, which have bee
+      automatically added to this application:
+    ol.lead
+      if user
+        li Registration (Already logged in!)
+        li Login (Already logged in!)
+      else
+        li
+          a(href="/register") Registration
+        li
+          a(href="/login") Login
+      li
+        a(href="/forgot") Forgot Password
+      li
+        a(href="/profile") Custom Profile Data
 
-    if user
+    //- else
+    //-   p Welcome to my app, ready to get started?
 
-      p Welcome, #{user.fullName}
+    //-   p
+    //-     a.btn.btn-primary(href="/login") Login now
 
-    else
-      p Welcome to my app, ready to get started?
-
-      p
-        a.btn.btn-primary(href="/login") Login now
-
-      p
-        span.small Don't have an account?
-        span &nbsp;
-        a.small(href="/register") Register now
+    //-   p
+    //-     span.small Don't have an account?
+    //-     span &nbsp;
+    //-     a.small(href="/register") Register now
