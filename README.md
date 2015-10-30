@@ -1,4 +1,4 @@
-# express-stormpath-sample-project
+# Express-Stormpath Example Project
 A simple Express.js web application to demonstrate core Stormpath functionality.
 
 ### Get Started!

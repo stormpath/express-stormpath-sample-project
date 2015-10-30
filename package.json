@@ -1,7 +1,7 @@
 {
   "name": "stormpath-express-profile-example",
   "version": "1.0.0",
-  "description": "A sample Express-Stormpath project that showcases how to store profile data in customData.",
+  "description": "A simple Express.js web application to demonstrate core Stormpath functionality.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -15,7 +15,9 @@
     "express",
     "example",
     "sample",
-    "customdata"
+    "customdata",
+    "express-stormpath",
+    "web app"
   ],
   "author": "Stormpath, Inc.",
   "license": "Apache",
