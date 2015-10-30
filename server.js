@@ -37,6 +37,7 @@ app.use('/', routes);
  * Start the web server.
  */
 app.on('stormpath.ready',function () {
+  console.log('Stormpath Ready');
   app.listen(3000);
 });
 

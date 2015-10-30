@@ -6,8 +6,8 @@ A simple Express.js web application to demonstrate core Stormpath functionality.
 1. Clone this repo to your computer, and cd into the project directory:
 
   ```bash
-  git clone https://github.com/stormpath/stormpath-express-profile-example.git
-  cd stormpath-express-profile-example
+  git clone https://github.com/stormpath/express-stormpath-sample-project.git
+  cd express-stormpath-sample-project
   ```
 
 2. Install the dependencies from package.json:
