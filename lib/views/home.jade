@@ -1,13 +1,17 @@
 extends ./layout.jade
+
+block vars
+  - var title = 'Home'
+
 block content
 
   if user
 
-    h2 Welcome Back, #{user.givenName}
+    h2.text-center Welcome Back, #{user.givenName}
 
   else
 
-    h2 Welcome!
+    h2.text-center Welcome!
   hr
   div.jumbotron
 

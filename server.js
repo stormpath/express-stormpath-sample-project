@@ -15,6 +15,7 @@ var app = express();
  */
 app.set('view engine', 'jade');
 app.set('views', './lib/views');
+app.locals.siteName = 'Express-Stormpath Example Project';
 
 /**
  * Stormpath initialization.
