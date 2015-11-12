@@ -13,6 +13,7 @@ var app = express();
 /**
  * Application settings.
  */
+app.set('trust proxy',true);
 app.set('view engine', 'jade');
 app.set('views', './lib/views');
 app.locals.siteName = 'Express-Stormpath Example Project';
