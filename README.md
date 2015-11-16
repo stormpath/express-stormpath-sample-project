@@ -16,11 +16,12 @@ A simple Express.js web application to demonstrate core Stormpath functionality.
   npm install
   ```
 
-3. Export your Stormpath API Key ID and Secret and Environment Variables:
+3. Export your Stormpath API Key ID / Secret and Application HREF Environment Variables:
 
   ```bash
   export STORMPATH_CLIENT_APIKEY_ID=xxx
   export STORMPATH_CLIENT_APIKEY_SECRET=xxx
+  export STORMPATH_APPLICATION_HREF=xxx
   ```
 
 4. Start the server:
