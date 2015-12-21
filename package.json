@@ -27,7 +27,7 @@
   "homepage": "https://github.com/stormpath/stormpath-express-profile-example",
   "dependencies": {
     "express": "^4.13.3",
-    "express-stormpath": "^2.3.3",
+    "express-stormpath": "^2.3.4",
     "jade": "^1.11.0"
   }
 }
