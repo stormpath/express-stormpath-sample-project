@@ -28,7 +28,7 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
-    "express-stormpath": "^2.3.4",
+    "express-stormpath": "^2.3.7",
     "jade": "^1.11.0"
   }
 }
