@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/stormpath/stormpath-express-profile-example",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "express-stormpath": "^2.3.4",
     "jade": "^1.11.0"
