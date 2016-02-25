@@ -15,11 +15,13 @@ nav.navbar.navbar-default.navbar-static-top
         if user
           li(class='#{nav.Profile}')
             a(href='/profile') My Profile
-      ul.nav.navbar-nav.navbar-right
-        if user
-          li(class='#{nav.Logout}')
-            a(href="/logout") Logout
-        else
+      if user
+        form(action='/logout', method='POST', id="logout_form")
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(onclick="document.getElementById('logout_form').submit();", style="cursor: pointer;") Logout
+      else
+        ul.nav.navbar-nav.navbar-right
           li(class='#{nav.Login}')
             a(href='/login') Login
           li(class='#{nav.Register} create-account')
