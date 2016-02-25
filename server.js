@@ -43,7 +43,7 @@ app.on('stormpath.ready',function () {
   console.log('Stormpath Ready');
   var port = process.env.PORT || 3000;
   app.listen(port, function () {
-    console.log('Sever listening on http://localhost:' + port);
+    console.log('Server listening on http://localhost:' + port);
   });
 });
 
