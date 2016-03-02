@@ -25,7 +25,6 @@ app.locals.siteName = 'Express-Stormpath Example Project';
 console.log('Initializing Stormpath');
 
 app.use(stormpath.init(app, {
-  website: true,
   expand: {
     customData: true
   }
@@ -36,14 +35,15 @@ app.use(stormpath.init(app, {
  */
 app.use('/', routes);
 
+app.on('stormpath.ready',function () {
+  console.log('Stormpath Ready');
+});
+
 /**
  * Start the web server.
  */
-app.on('stormpath.ready',function () {
-  console.log('Stormpath Ready');
-  var port = process.env.PORT || 3000;
-  app.listen(port, function () {
-    console.log('Server listening on http://localhost:' + port);
-  });
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+  console.log('Server listening on http://localhost:' + port);
 });
 
