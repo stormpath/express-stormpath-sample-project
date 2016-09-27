@@ -20,7 +20,7 @@
     "web app"
   ],
   "author": "Stormpath, Inc.",
-  "license": "Apache",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/stormpath/stormpath-express-profile-example/issues"
   },
