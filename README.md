@@ -1,5 +1,11 @@
 # Express-Stormpath Example Project
-A simple Express.js web application to demonstrate core Stormpath functionality.
+
+A simple Express.js web application to demonstrate core Stormpath functionality.  In this application you can see:
+
+* The default registration and login pages that `express-stormpath` can provide to your application.
+* How you can require authentication for custom API routes.
+* Updating the custom data of the Stormpath user object, with a custom profile form.
+* Cross-domain authentication, when CORS is required.
 
 ### Get Started!
 
