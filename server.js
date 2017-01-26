@@ -1,5 +1,6 @@
 'use strict';
 
+var bodyParser = require('body-parser');
 var express = require('express');
 var stormpath = require('express-stormpath');
 
@@ -23,6 +24,8 @@ app.locals.siteName = 'Express-Stormpath Example Project';
  */
 
 console.log('Initializing Stormpath');
+
+app.use(bodyParser.json());
 
 app.use(stormpath.init(app, {
   expand: {
