@@ -1,50 +1,69 @@
-#Stormpath is Joining Okta
+# Stormpath is Joining Okta
 We are incredibly excited to announce that [Stormpath is joining forces with Okta](https://stormpath.com/blog/stormpaths-new-path?utm_source=github&utm_medium=readme&utm-campaign=okta-announcement). Please visit [the Migration FAQs](https://stormpath.com/oktaplusstormpath?utm_source=github&utm_medium=readme&utm-campaign=okta-announcement) for a detailed look at what this means for Stormpath users.
 
 We're available to answer all questions at [support@stormpath.com](mailto:support@stormpath.com).
 
-# Express-Stormpath Example Project
+## What does this mean for developers who are using this library?
 
-A simple Express.js web application to demonstrate core Stormpath functionality.  In this application you can see:
+This library was an example project that showed you how integrate the [express-stormpath][] library into your Express application.
 
-* The default registration and login pages that `express-stormpath` can provide to your application.
-* How you can require authentication for custom API routes.
-* Updating the custom data of the Stormpath user object, with a custom profile form.
-* Cross-domain authentication, when CORS is required.
+Now this example has been changed to depend on the in-progress 4.0 release of [express-stormpath][].  You can use this sample application to demostrate the work in progress on the 4.0 release
 
-### Get Started!
+## How to use this to test Express-Stormpath 4.0 Release Candidates
 
-1. Clone this repo to your computer, and cd into the project directory:
+1. Current stormpath developers should obtain an Okta Developer organization by visiting https://www.okta.com/developer/signup/stormpath
+
+2. Clone this repo to your computer, and cd into the project directory:
 
   ```bash
   git clone https://github.com/stormpath/express-stormpath-sample-project.git
   cd express-stormpath-sample-project
   ```
 
-2. Install the dependencies from package.json:
+3. Install the dependencies from package.json:
 
   ```bash
   npm install
   ```
 
-3. Export your Stormpath API Key ID / Secret and Application HREF Environment Variables:
+4. Export your Okta Org URL to the environment, this was emailed to you when you signed up, and it's the URL you use to get into the Okta Admin Console:
 
   ```bash
-  export STORMPATH_CLIENT_APIKEY_ID=xxx
-  export STORMPATH_CLIENT_APIKEY_SECRET=xxx
-  export STORMPATH_APPLICATION_HREF=xxx
+  export OKTA_ORG=https://dev-YOUR_ORG_ID.oktapreview.com/
   ```
 
-4. Start the server:
+5. Using the Okta Admin Console, obtain an API Token for the Okta API by visiting Admin -> Security -> API -> Tokens, then exporting it to the environmenet:
+
+  ```bash
+  export OKTA_APITOKEN=YOUR_TOKEN
+  ```
+
+6. Run the test data script to populate your tenant with some test data:
+
+  ```bash
+  node ./node_modules/express-stormpath/util/okta-test-data.js --apiToken=$OKTA_APITOKEN --org=$OKTA_ORG
+  ```
+
+  The script will output some information, including an Okta Application ID, which you should export to the environment:
+
+  ```bash
+  export OKTA_APPLICATION_ID=YOUR_ID
+  ```
+7. Start the node server:
 
   ```bash
   node server.js
   ```
 
-5. Visit [http://localhost:3000/](http://localhost:3000/) in your browser
+8. Visit [http://localhost:3000/](http://localhost:3000/) in your browser.  You should be able to login with the credentials that were provided by the test data script
 
-## Learn More
-Visit [http://docs.stormpath.com/nodejs/express/latest/](http://docs.stormpath.com/nodejs/express/latest/)
+If you are able to login, things are working!  You can now use this app to test any use cases that are important to you.  As you do so, you'll want to review the [Express-Stormpath 4.x Changelog][] to understand what is changing.
+
+The data import tool, allowing you to import your Stormpath data into Okta, will be available by the end of April.  At that time you will also be able to use this application to test cases with your imported data.
 
 ## Contact Stormpath Support
-[support@stormpath.com](mailto:support@stormpath.com)
+
+Questions?  Please get in touch through [support@stormpath.com](mailto:support@stormpath.com), your feedback is very important during this migration!
+
+[express-stormpath]: https://github.com/stormpath/express-stormpath
+[Express-Stormpath 4.x Changelog]: https://github.com/stormpath/express-stormpath/blob/4.0.0/docs/changelog.rst

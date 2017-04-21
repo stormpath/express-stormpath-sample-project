@@ -29,7 +29,7 @@
     "body-parser": "^1.14.2",
     "cors": "^2.8.1",
     "express": "^4.13.3",
-    "express-stormpath": "^3.x",
+    "express-stormpath": "4.0.0-rc2",
     "jade": "^1.11.0"
   }
 }
